@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>유럽 여행 12.3–12.13</title>
+<style>
+:root{--bg:#f2f4f7;--card:#fff;--ink:#15202e;--mute:#5d6b7c;--line:#dde3ea;--bar:rgba(242,244,247,.9);--p:#3a62b0;--f:#b23a4e;--t:#66801f;--r:#a86f10;--s:#167b7b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1620;--card:#18212d;--ink:#eaf0f6;--mute:#9aa8b8;--line:#263344;--bar:rgba(15,22,32,.9)}}
+:root[data-theme="dark"]{--bg:#0f1620;--card:#18212d;--ink:#eaf0f6;--mute:#9aa8b8;--line:#263344;--bar:rgba(15,22,32,.9)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;-webkit-tap-highlight-color:transparent;word-break:keep-all}
+body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:var(--bar);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);z-index:20}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px 32px}
+a{color:inherit;text-decoration:none}
+h1{font-size:42px;line-height:1.12;letter-spacing:-.03em;font-weight:800;margin:28px 0 10px}
+.date{font-size:18px;color:var(--mute);margin:0 0 26px}
+.rt{display:flex;gap:6px;margin-bottom:8px}
+.rt div{min-width:0}
+.rt i{display:block;height:10px;border-radius:5px;background:var(--c);margin-bottom:8px}
+.rt b{display:block;font-size:16px}
+.rt small,.mute{color:var(--mute);font-size:13px}
+.menu{margin:28px 0 20px;display:grid;gap:10px}
+.m{display:flex;align-items:center;gap:12px;min-height:72px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.m:active{transform:scale(.985)}
+.m div{flex:1}
+.m b{display:block;font-size:18px}
+.m span{font-size:14px;color:var(--mute)}
+.m em{font-style:normal;font-size:26px;color:var(--mute)}
+.note{font-size:13px;color:var(--mute);margin:8px 2px 0}
+.hd{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:var(--bar);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd .row{max-width:560px;margin:0 auto;display:flex;align-items:center;padding:4px 8px 0;min-height:48px}
+.bk{display:flex;align-items:center;min-height:44px;padding:0 10px;font-size:17px;color:var(--p);font-weight:600}
+.hd h2{margin:0 0 0 4px;font-size:18px;font-weight:700}
+.chips{max-width:560px;margin:0 auto;display:flex;gap:8px;padding:6px 16px 10px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.c{flex:none;min-height:40px;padding:0 15px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:15px;cursor:pointer}
+.c.on{background:var(--c);border-color:var(--c);color:#fff;font-weight:700}
+.g{margin:22px 0 10px}
+.g h3{display:flex;align-items:center;gap:8px;margin:0;font-size:20px}
+.g h3::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--c)}
+.g p{margin:2px 0 0 20px;font-size:14px;color:var(--mute)}
+.it{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:14px;padding:13px 14px;margin-bottom:10px}
+.it h4{margin:0;font-size:17px;line-height:1.4}
+.it p{margin:4px 0 0;font-size:15px;color:var(--mute);line-height:1.55}
+.it .s{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:10px;background:var(--line);margin-bottom:6px}
+.tl .it{display:grid;grid-template-columns:3.6em 1fr;column-gap:10px}
+.tl .it .s{background:none;padding:0;margin:2px 0 0;font-size:14px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+var R={p:["파리","--p"],f:["피렌체","--f"],t:["토스카나","--t"],r:["로마","--r"],s:["남부","--s"]};
+function S(r,g,n,i){return{r:r,g:g,n:n,i:i}}
+function G(r,i){return{r:r,g:R[r][0],n:"",i:i}}
+var D={
+schedule:{t:"일자/시간대별 일정",tl:1,g:[
+S("p","12/3 목","인천 → 파리 도착",[["오전","인천 출발","직항 약 14시간. 항공 시간에 따라 이후 일정은 조정하세요."],["오후","파리 도착 · 체크인","공항에서 RER B나 택시로 시내 이동 후 휴식."],["저녁","마레 지구 산책","시차 적응이 먼저예요. 크레이프나 팔라펠로 가볍게."]]),
+S("p","12/4 금","파리 1일 · 클래식 코스",[["09:00","루브르 박물관","모나리자, 밀로의 비너스, 사모트라케의 니케 위주로 약 3시간. 시간 지정 예약."],["12:30","튈르리 정원 점심","정원 주변 카페에서 간단히."],["14:30","콩코르드 광장 → 샹젤리제","오벨리스크에서 개선문까지 걷기. 크리스마스 조명 구간."],["16:30","개선문 전망대","해 질 무렵 올라가면 에펠탑 야경까지 볼 수 있어요."],["19:00","에펠탑 야경","어두워진 뒤 매시 정각 5분간 반짝이는 조명. 트로카데로에서 보는 구도가 좋아요."]]),
+S("p","12/5 토","파리 2일 · 언덕과 미술관",[["09:30","몽마르트르 · 사크레쾨르","언덕 위 전망과 화가의 광장. 오전이 한산해요."],["12:00","점심","몽마르트르 골목 비스트로."],["14:00","오르세 미술관","인상파 컬렉션. 월요일 휴관이라 토요일에 배치."],["16:30","노트르담 · 생루이섬","재개장한 대성당 외관과 센강 섬 산책."],["19:30","센강 야경 크루즈","1시간 내외. 겨울엔 실내 좌석이 편해요."]]),
+S("f","12/6 일","파리 → 피렌체",[["오전","체크아웃 · 공항 이동","파리–피렌체 직항 약 2시간. 이른 항공편이 여유로워요."],["오후","피렌체 도착 · 체크인","공항에서 트램으로 시내까지 약 20분."],["17:00","두오모 광장 산책","해 질 무렵 두오모와 조토의 종탑 외관."],["19:30","첫 저녁 트라토리아","현지식으로 시작."]]),
+S("f","12/7 월","피렌체 1일 · 우피치 휴관일",[["09:00","두오모 쿠폴라","463계단을 올라 시내 전망. 사전 예약 필수."],["12:00","산 로렌초 시장 · 중앙시장","가죽 시장 구경 후 푸드홀에서 점심."],["14:00","시뇨리아 광장 · 베키오 궁전","야외 조각상과 광장."],["16:00","베키오 다리 · 올트라르노","공방 골목을 지나 산토 스피리토 광장까지."],["17:30","미켈란젤로 광장 일몰","피렌체 전경 일몰 명소. 버스 12·13번 또는 도보."]]),
+S("t","12/8 화","토스카나 당일 투어",[["08:30","피렌체 출발","미니밴 투어나 렌터카. 12/8은 이탈리아 공휴일이라 일부 상점이 쉴 수 있어요."],["10:30","시에나","캄포 광장과 두오모."],["13:00","산 지미냐노 · 점심","중세 탑 마을과 젤라또."],["15:30","키안티 와이너리","시음과 올리브오일."],["18:30","피렌체 귀환","저녁은 숙소 근처에서 가볍게."]]),
+S("r","12/9 수","피렌체 → 로마",[["08:30","우피치 갤러리","보티첼리의 “비너스의 탄생”. 시간 지정 예약."],["11:30","아카데미아 미술관","미켈란젤로의 다비드상. 예약 필수."],["13:30","점심 후 이동","산타 마리아 노벨라역에서 고속열차로 약 1시간 30분."],["16:30","로마 도착 · 체크인","테르미니역 근처 숙소 기준."],["19:00","트레비 분수 · 판테온 야경","밤에 더 한산하고 분위기가 좋아요."]]),
+S("r","12/10 목","로마 1일 · 고대 로마",[["08:30","콜로세움 · 포로 로마노 · 팔라티노","통합권, 시간 지정 예약. 오전 일찍."],["12:30","점심","몬티 지구 식당."],["14:30","캄피돌리오 언덕","미켈란젤로가 설계한 광장과 전망."],["16:30","베네치아 광장 → 나보나 광장","걸어서 이동하며 로마 중심부 구경."],["19:00","판테온 주변 저녁","로마식 파스타."]]),
+S("r","12/11 금","로마 2일 · 바티칸",[["08:00","바티칸 박물관 · 시스티나 성당","사전 예약. 가이드 투어 권장. 어깨와 무릎을 가리는 복장."],["12:30","성 베드로 대성당","입장 무료(보안검색). 쿠폴라는 유료."],["15:00","산탄젤로 성 · 천사의 다리","강변 산책."],["17:30","트라스테베레","골목 산책 후 저녁."]]),
+S("s","12/12 토","남부 당일 · 나폴리와 폼페이",[["07:30","로마 테르미니 출발","고속열차로 나폴리까지 약 1시간 10분."],["09:30","나폴리 구시가 · 피자","스파카나폴리 골목과 현지 피자."],["12:30","폼페이 유적","사철이나 투어로 이동. 관람 2~3시간."],["16:30","산 그레고리오 아르메노","크리스마스 프레세피오 공방 거리. 12월에 특히 볼만해요."],["18:30","로마 귀환","막차 시간 확인."]]),
+S("r","12/13 일","로마 → 귀국",[["오전","마지막 쇼핑 · 체크아웃","테르미니역에서 공항 급행열차로 약 30분."],["오후","로마 출발","출발 3시간 전 공항 도착. 세금 환급 도장을 먼저 받으세요."]])
+]},
+spots:{t:"지역별 주요 관광지",g:[
+G("p",[["필수","에펠탑","정상 전망대는 온라인 예약 권장. 야경은 매시 정각 조명."],["필수","루브르 박물관","화요일 휴관. 시간 지정 예약."],["추천","오르세 미술관","월요일 휴관. 인상파 작품."],["추천","몽마르트르 · 사크레쾨르","파리 전경과 화가의 거리."],["추천","노트르담 · 생트샤펠","스테인드글라스는 맑은 날 오전에."],["선택","베르사유 궁전","반일 코스. 월요일 휴관."]]),
+G("f",[["필수","두오모 복합단지","대성당, 쿠폴라, 종탑, 세례당. 통합권."],["필수","우피치 갤러리","월요일 휴관. 시간 지정 예약."],["필수","아카데미아 미술관","다비드상. 월요일 휴관."],["추천","베키오 다리","금세공 상점이 늘어선 다리."],["추천","미켈란젤로 광장","일몰 전망 명소."],["선택","산타 크로체 성당","미켈란젤로와 갈릴레이의 묘."]]),
+G("t",[["추천","시에나","캄포 광장과 고딕 대성당."],["추천","산 지미냐노","중세 탑이 솟은 언덕 마을."],["추천","키안티 지역","포도밭과 와이너리 풍경."],["선택","발 도르차","피엔차, 몬테풀치아노. 풍경 중심의 하루."],["선택","피사","사탑 외관 중심의 반일 코스."]]),
+G("r",[["필수","콜로세움 · 포로 로마노","통합 티켓, 시간 지정."],["필수","바티칸 박물관 · 성 베드로","일요일은 대부분 휴관."],["필수","판테온","로마 건축의 정수. 입장 방식은 방문 전 확인."],["추천","트레비 분수","밤이나 이른 아침이 한산."],["추천","스페인 계단 · 나보나 광장","걸으며 보는 로마 중심."],["추천","트라스테베레","골목과 저녁 분위기."]]),
+G("s",[["필수","폼페이 유적","폼페이 고대 도시. 관람 2~3시간."],["추천","나폴리 구시가","스파카나폴리와 좁은 골목 풍경."],["선택","아말피 해안","겨울엔 페리 운항 제한. 육로 투어로."],["선택","카프리","겨울엔 운항과 영업이 제한적."],["선택","베수비오 화산","겨울 오름 가능 여부는 확인 필요."]])
+]},
+food:{t:"맛집",g:[
+G("p",[["비스트로","Bouillon Chartier","클래식 대형 식당. 합리적인 가격, 예약 불가라 줄이 길어요."],["빵집","Du Pain et des Idées","생마르탱 운하 근처 유명 빵집. 에스카르고 페이스트리."],["크레이프","Breizh Café","마레의 브르타뉴식 크레이프와 시드르."],["카페","Angelina","핫초코와 몽블랑. 오전 이른 시간이 덜 붐벼요."],["길거리","L’As du Fallafel","마레의 팔라펠 샌드위치."],["시장","Marché des Enfants Rouges","현지인 푸드 마켓."]]),
+G("f",[["샌드위치","All’Antico Vinaio","스키아차타 샌드위치. 점심 시간 전에 가세요."],["푸드홀","Mercato Centrale","2층 푸드홀에서 파스타, 피자, 트리파 샌드위치."],["트라토리아","Trattoria Mario","점심 전용 현지 식당, 일요일 휴무. 합석이 일반적이에요."],["스테이크","Il Latini","비스테카 알라 피오렌티나. 저녁 예약 권장."],["스테이크","Trattoria Sostanza","버터 치킨과 비스테카. 예약 권장."],["젤라또","Gelateria dei Neri","산타 크로체 쪽 진한 맛."]]),
+G("t",[["시에나","Nannini","판포르테 같은 시에나 전통 디저트."],["산 지미냐노","Gelateria Dondoli","수상 경력으로 유명한 젤라또 가게."],["키안티","Dario Cecchini (파차노)","유명 정육점 겸 식당. 와이너리 코스와 연결하기 좋아요."],["특산","페코리노 · 트러플","피엔차 페코리노. 12월은 화이트 트러플 시즌 끝자락."]]),
+G("r",[["카르보나라","Roscioli Salumeria","살루메리아 겸 식당. 예약 필수."],["트라스테베레","Da Enzo al 29","로마식 가정 요리. 줄이 길면 오픈 직전에 도착."],["파스타","Armando al Pantheon","판테온 옆 작은 트라토리아. 예약 필수."],["피자","Pizzarium (Bonci)","바티칸 근처 조각 피자. 투어 전후 점심으로."],["커피","Sant’Eustachio Il Caffè","판테온 근처 에스프레소 명소."],["젤라또","Giolitti","오랜 역사의 노포 젤라또."]]),
+G("s",[["피자","L’Antica Pizzeria da Michele","마르게리타 중심의 나폴리 정통 피자. 대기가 길어요."],["피자","Sorbillo","구시가 피자 명가."],["디저트","Attanasio","갓 구운 스폴리아텔라."],["카페","Gran Caffè Gambrinus","역사적인 나폴리 카페."],["팁","폼페이 점심","유적 안 카페테리아는 혼잡. 입구 밖 식당이 낫습니다."]])
+]},
+shopping:{t:"쇼핑",g:[
+G("p",[["백화점","Galeries Lafayette Haussmann","12월 대형 트리와 쇼윈도. 옥상 전망대 무료."],["백화점","Printemps Haussmann","바로 옆. 뷰티와 럭셔리, 크리스마스 쇼윈도."],["백화점","Le Bon Marché","좌안 백화점. 옆 La Grande Épicerie에서 식료품 기념품."],["화장품","약국 · 모노프리","아벤느, 비오데르마 같은 약국 화장품."],["골목","마레 · 생제르맹","편집숍과 부티크."],["환급","부가세 환급","같은 매장 최소 구매 금액 이상이면 가능. 여권 지참, 공항에서 도장. 국가별 기준은 확인하세요."]]),
+G("f",[["가죽","Scuola del Cuoio","산타 크로체 수도원 안 가죽 공방."],["시장","산 로렌초 시장","가죽 제품 노점. 품질을 확인하고 흥정."],["향수","Santa Maria Novella 약국","오래된 약국 향수와 비누."],["주얼리","베키오 다리","금세공 상점이 줄지어 있어요."],["아울렛","The Mall (레쵸)","명품 아울렛. 피렌체에서 차로 약 40분, 셔틀 이용."]]),
+G("t",[["와인","키안티 · 몬테풀치아노","시음 후 구매. 수하물 포장 필수."],["오일","올리브오일 · 발사믹","농장에서 직접 사면 품질이 좋아요."],["치즈","피엔차 페코리노","진공 포장 요청."],["디저트","시에나 판포르테","선물용 전통 케이크."]]),
+G("r",[["명품","Via dei Condotti","스페인 계단 앞 명품 거리."],["백화점","La Rinascente","트레비 분수 근처. 옥상 카페 전망."],["거리","Via del Corso","중저가 브랜드 거리."],["식품","Eataly Roma","파스타, 소스, 와인 등 식료품 기념품."],["아울렛","Castel Romano Designer Outlet","로마 외곽. 차로 약 30~40분."]]),
+G("s",[["공예","산 그레고리오 아르메노","프레세피오 공방 거리. 12월에 가장 활기찬 곳."],["거리","Via Toledo","나폴리 중심 쇼핑가."],["특산","소렌토 레몬 제품","리몬첼로와 레몬 비누."]])
+]},
+tours:{t:"투어 프로그램",g:[
+G("p",[["시간 지정","루브르 가이드 투어","2~3시간. 인파가 적은 오전에."],["예약 필수","에펠탑 정상 티켓","온라인 예약. 해 질 무렵 시간대가 인기."],["선택","센강 야경 크루즈","1시간 내외. 에펠탑·퐁뇌프 부근 승선."],["선택","베르사유 반일 투어","RER C로 약 40분. 월요일 휴관."],["공연","물랭루주 쇼","사전 예약, 복장 규정."]]),
+G("f",[["시간 지정","우피치 + 아카데미아","가이드 동반 상품도 있어요."],["예약 필수","두오모 쿠폴라 패스","쿠폴라, 종탑, 박물관을 묶어서."],["선택","피사 반일 투어","기차로 약 1시간. 사탑 외관 중심."],["체험","쿠킹 클래스","시장 방문 + 파스타 만들기."]]),
+G("t",[["당일","시에나 · 산 지미냐노 · 키안티","12/8 일정. 8~10시간, 점심과 와이너리 시음 포함 상품이 많아요."],["선택","발 도르차 투어","이동 시간이 길고 풍경 중심."],["시즌","트러플 헌팅","12월은 시즌 끝자락. 운영 여부 문의."]]),
+G("r",[["시간 지정","콜로세움 + 포로 + 팔라티노","통합 티켓에 가이드 투어를 붙이면 이해가 쉬워요."],["예약 필수","바티칸 가이드 투어","박물관, 시스티나, 성 베드로 포함. 인기가 높아 일찍 마감돼요."],["선택","지하묘지 · 아피아 가도","반일 투어."],["체험","로마 쿠킹 클래스","카르보나라와 아마트리치아나 직접 만들기."]]),
+G("s",[["당일","나폴리 + 폼페이","12/12 일정. 기차로 개별 이동하거나 가이드 상품 이용."],["선택","아말피 해안 투어","로마 출발은 12시간 이상. 겨울 페리 운항 제한을 확인하세요."],["선택","카프리","겨울엔 운항과 영업이 제한적. 날씨와 휴업 확인."],["선택","베수비오 화산","겨울 오름 가능 여부와 예약 확인."]])
+]}
+};
+var M=[["schedule","일자/시간대별 일정","12/3–12/13, 하루를 시간대별로"],["spots","지역별 주요 관광지","파리 · 피렌체 · 토스카나 · 로마 · 남부"],["food","맛집","지역별 식당, 카페, 디저트"],["shopping","쇼핑","백화점, 시장, 아울렛, 기념품"],["tours","투어 프로그램","예약이 필요한 투어와 체험"]];
+var app=document.getElementById("app"),cur="",sel=0,view=null;
+function home(){
+var m=M.map(function(x){return '<a class="m" href="#'+x[0]+'"><div><b>'+x[1]+'</b><span>'+x[2]+'</span></div><em>›</em></a>'}).join("");
+app.innerHTML='<h1>파리에서<br>로마까지</h1><p class="date">12월 3일(목) – 13일(일)</p>'+
+'<div class="rt"><div style="flex:3;--c:var(--p)"><i></i><b>파리</b><small>12/3–6</small></div><div style="flex:3;--c:var(--f)"><i></i><b>피렌체</b><small>12/6–9</small></div><div style="flex:4;--c:var(--r)"><i></i><b>로마</b><small>12/9–13</small></div></div>'+
+'<p class="mute">토스카나는 12/8, 남부는 12/12 당일 투어로 다녀옵니다.</p><nav class="menu">'+m+'</nav>'+
+'<p class="note">운영 시간, 요금, 예약 가능 여부는 바뀔 수 있어요. 출발 전 공식 사이트에서 확인하세요.</p>';
+}
+function fill(){
+var l=document.getElementById("list"),gs=view.g,h="";
+gs.forEach(function(g,k){
+if(sel>=0&&sel!==k)return;
+h+='<section style="--c:var(--'+(R[g.r][1].slice(2))+')"><div class="g"><h3>'+g.g+(g.n&&view.tl?'<span class="mute" style="font-weight:400"> '+g.n+'</span>':'')+'</h3>'+(g.n&&!view.tl?'<p>'+g.n+'</p>':'')+'</div>'+
+g.i.map(function(x){return '<article class="it"><div class="s">'+x[0]+'</div><div><h4>'+x[1]+'</h4><p>'+x[2]+'</p></div></article>'}).join("")+'</section>';
+});
+l.className=view.tl?"tl":"";l.innerHTML=h;
+var cs=document.querySelectorAll(".c");
+for(var i=0;i<cs.length;i++)cs[i].classList.toggle("on",+cs[i].getAttribute("data-i")===sel);
+}
+function detail(h){
+view=D[h];sel=h==="schedule"?0:-1;
+var c=(view.tl?"":'<button class="c on" data-i="-1" style="--c:#44505f">전체</button>')+view.g.map(function(g,k){return '<button class="c" data-i="'+k+'" style="--c:var(--'+R[g.r][1].slice(2)+')">'+g.g+'</button>'}).join("");
+app.innerHTML='<header class="hd" style="margin:0 -16px"><div class="row"><a class="bk" href="#">‹ 홈</a><h2>'+view.t+'</h2></div><div class="chips">'+c+'</div></header><main id="list"></main>';
+app.querySelector(".chips").addEventListener("click",function(e){var b=e.target.closest(".c");if(!b)return;sel=+b.getAttribute("data-i");fill();window.scrollTo(0,0)});
+fill();
+}
+function route(){
+var h=location.hash.slice(1);
+if(h===cur&&cur)return;
+cur=D[h]?h:"";
+if(cur)detail(cur);else home();
+window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",route);
+route();
+</script>
+</body>
+</html>
